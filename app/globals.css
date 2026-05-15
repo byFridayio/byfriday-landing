@@ -503,7 +503,10 @@ ul { list-style: none; padding: 0; }
   .inbox-line1 { flex-wrap: wrap; }
   .sp-video-cover iframe { width: 300%; height: 300%; }
   .step-pill { display: none; }
-  .inbox-frame { display: none; }
+  /* Inbox on mobile: render the post-animation final state statically (no JS) */
+  #inboxNewRow { max-height: 72px !important; }
+  #inboxFirstRow { opacity: 1 !important; transform: none !important; background: transparent !important; }
+  #firstRowDot { display: none !important; }
   .auto-tile { border-radius: 24px; padding: 24px; }
 }
 @media (max-width: 640px) {
