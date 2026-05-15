@@ -485,12 +485,13 @@ ul { list-style: none; padding: 0; }
   .hero-thumb { min-height: 400px; }
   section { padding-left: 20px !important; padding-right: 20px !important; }
   .sp-testimonial, .sp-joes-col { padding: 32px !important; }
-  .choice-grid { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
-  .choice-card { flex: 0 0 auto; width: 140px; min-height: 160px; scroll-snap-align: start; }
-  .choice-body { padding: 20px 12px 16px; gap: 12px; }
-  .choice-icon { width: 40px; height: 40px; }
-  .choice-icon svg { width: 32px; height: 32px; }
-  .choice-label { font-size: 14px; }
+  .choice-grid { grid-template-columns: 1fr !important; gap: 8px !important; }
+  .choice-card { min-height: auto; flex-direction: row; border-radius: 14px; }
+  .choice-body { flex-direction: row; padding: 16px; gap: 12px; }
+  .choice-icon { width: 32px; height: 32px; }
+  .choice-icon svg { width: 24px; height: 24px; }
+  .choice-label { font-size: 15px; }
+  .choice-select { display: none; }
   .float-cta { bottom: 16px; right: 16px; }
   .sp-popup { left: 16px; right: 16px; bottom: 16px; }
   .inbox-toolbar { flex-wrap: wrap; gap: 8px; }
