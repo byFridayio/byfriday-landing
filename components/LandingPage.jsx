@@ -802,7 +802,7 @@ export default function LandingPage({ data }) {
             <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <div className="phone-mock" id="phoneMock">
                 <div className="phone-header">
-                  <div className="phone-avatar"><img src="/assets/byfr-footer.svg" alt="" /></div>
+                  <div className="phone-avatar"><img src="/assets/byfriday-secondary-white.svg" alt="" /></div>
                   <div><div className="phone-name">byFriday</div><div className="phone-status">SMS &middot; just now</div></div>
                 </div>
                 <div className="bubble-them bubble" data-bubble="1">Hey! Sorry we missed your call. We&apos;ll have someone call you back shortly. In the meantime, if you want to know about our services and pricing &mdash; or schedule a call &mdash; I can do that here.</div>
