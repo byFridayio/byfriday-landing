@@ -21,7 +21,7 @@
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--font-sans);
   color: var(--fg-1);
@@ -304,8 +304,8 @@ ul { list-style: none; padding: 0; }
 
 /* ===== PLATFORM ===== */
 .platform { background: var(--bg-1); padding: 96px 24px; overflow-x: clip; }
-.platform-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
-.platform-left { display: flex; flex-direction: column; gap: 16px; }
+.platform-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; min-width: 0; }
+.platform-left { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .platform-left .section-eyebrow { background: #fff; align-self: flex-start; }
 .platform-left p { font-size: 17px; line-height: 1.55; color: var(--fg-2); }
 .platform-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
@@ -313,7 +313,7 @@ ul { list-style: none; padding: 0; }
 .platform-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-ember-glow); margin-top: 8px; flex-shrink: 0; }
 
 /* Inbox mock */
-.inbox-frame { background: #fff; border-radius: 28px; padding: 16px; border: 1px solid var(--color-faded-gray); box-shadow: rgba(0,0,0,0.06) 0 24px 60px -16px; overflow: hidden; max-width: 100%; }
+.inbox-frame { background: #fff; border-radius: 28px; padding: 16px; border: 1px solid var(--color-faded-gray); box-shadow: rgba(0,0,0,0.06) 0 24px 60px -16px; overflow: hidden; max-width: 100%; min-width: 0; }
 .inbox-toolbar { display: flex; justify-content: space-between; align-items: center; padding: 4px 8px 16px; border-bottom: 1px solid var(--color-whisper-gray); }
 .inbox-tabs { display: flex; gap: 4px; }
 .inbox-tab { padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 500; color: var(--fg-3); display: flex; align-items: center; gap: 6px; }
