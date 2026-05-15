@@ -303,7 +303,7 @@ ul { list-style: none; padding: 0; }
 .chat-tile { grid-column: span 4; }
 
 /* ===== PLATFORM ===== */
-.platform { background: var(--bg-1); padding: 96px 24px; overflow: hidden; }
+.platform { background: var(--bg-1); padding: 96px 24px; overflow-x: clip; }
 .platform-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
 .platform-left { display: flex; flex-direction: column; gap: 16px; }
 .platform-left .section-eyebrow { background: #fff; align-self: flex-start; }
