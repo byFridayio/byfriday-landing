@@ -494,6 +494,8 @@ ul { list-style: none; padding: 0; }
   .choice-select { display: none; }
   .float-cta { bottom: 16px; right: 16px; }
   .sp-popup { left: 16px; right: 16px; bottom: 16px; }
+  .ad-group { gap: 36px; padding-right: 36px; }
+  .ad-group img { height: 22px; }
   .inbox-toolbar { flex-wrap: wrap; gap: 8px; }
   .inbox-search { display: none; }
   .inbox-row { gap: 8px; padding: 10px 4px; }
