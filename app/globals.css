@@ -503,8 +503,11 @@ ul { list-style: none; padding: 0; }
   .inbox-line1 { flex-wrap: wrap; }
   .sp-video-cover iframe { width: 300%; height: 300%; }
   .step-pill { display: none; }
-  /* Inbox on mobile: render the post-animation final state statically (no JS).
+  /* Inbox on mobile: constrain to viewport so the rows' intrinsic min-width
+     doesn't push the card wider than the screen (re-applies fix from 34b6fee).
+     Then render the post-animation final state statically (no JS).
      max-height: none lets the new row grow when .inbox-line1 wraps. */
+  .inbox-frame { width: calc(100vw - 40px); max-width: calc(100vw - 40px); box-sizing: border-box; border-radius: 20px; }
   #inboxNewRow { max-height: none !important; overflow: visible !important; }
   #inboxFirstRow { opacity: 1 !important; transform: none !important; background: transparent !important; }
   #firstRowDot { display: none !important; }
