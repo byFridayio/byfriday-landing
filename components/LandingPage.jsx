@@ -490,7 +490,7 @@ export default function LandingPage({ data }) {
           </div>
           <div className="hero-right">
             <button type="button" className="hero-thumb" id="heroPlayBtn" aria-label="Play product video">
-              <img loading="lazy" src={urlFor(data?.hero?.heroImage) || '/assets/Jamie.jpg'} alt="" />
+              <img fetchPriority="high" src={urlFor(data?.hero?.heroImage) || '/assets/Jamie.webp'} alt="" />
               <div className="hero-thumb-overlay"></div>
               <div className="hero-live-pill"><span className="live-dot"></span>{data?.hero?.livePillText || 'Live \u00b7 booking now'}</div>
               <div className="hero-play-wrap">
@@ -542,7 +542,7 @@ export default function LandingPage({ data }) {
             </div>
           </div>
           <div className="sp-video-card">
-            <img loading="lazy" src={urlFor(data?.socialProof?.caseStudyImage) || '/assets/quooker-byfriday.png'} alt="" />
+            <img loading="lazy" src={urlFor(data?.socialProof?.caseStudyImage) || '/assets/quooker-byfriday.webp'} alt="" />
             <div className="sp-video-overlay"></div>
           </div>
           <div className="sp-cred-card">
@@ -555,7 +555,7 @@ export default function LandingPage({ data }) {
               <div className="sp-joes-row"><span className="sp-joes-row-label">Channel</span><span className="sp-joes-row-value">{data?.socialProof?.credChannel || 'Paid + form qualified'}</span></div>
             </div>
             <div className="sp-joes-img-wrap">
-              <img loading="lazy" src={urlFor(data?.socialProof?.credImage) || '/assets/joes-door-brochure.png'} alt={data?.socialProof?.credClientName || "Joe's Doors"} />
+              <img loading="lazy" src={urlFor(data?.socialProof?.credImage) || '/assets/joes-door-brochure.webp'} alt={data?.socialProof?.credClientName || "Joe's Doors"} />
             </div>
           </div>
           <div className="sp-testimonial">
@@ -595,7 +595,7 @@ export default function LandingPage({ data }) {
           <div className="funnel-steps" id="funnelSteps">
             <div className="funnel-step" data-step="0">
               <span className="funnel-step-num">01</span>
-              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[0]?.image) || '/assets/quooker-ad.png'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
+              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[0]?.image) || '/assets/quooker-ad.webp'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
               <div className="funnel-step-overlay" style={{ display: 'none' }}></div>
               <div className="funnel-step-content">
                 <div className="funnel-step-icon"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"><path d="M3 11v2a1 1 0 0 0 1 1h4l5 4V6L8 10H4a1 1 0 0 0-1 1z" /><path d="M16 8a4 4 0 0 1 0 8" /><path d="M19 5a8 8 0 0 1 0 14" /></svg></div>
@@ -606,7 +606,7 @@ export default function LandingPage({ data }) {
             <svg className="funnel-arrow" data-arrow="1" width="28" height="20" viewBox="0 0 28 20" fill="none"><path d="M2 10h22M18 4l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
             <div className="funnel-step" data-step="1">
               <span className="funnel-step-num">02</span>
-              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[1]?.image) || '/assets/quooker-landing-page.png'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
+              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[1]?.image) || '/assets/quooker-landing-page.webp'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
               <div className="funnel-step-overlay" style={{ display: 'none' }}></div>
               <div className="funnel-step-content">
                 <div className="funnel-step-icon"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18" /><path d="M7 13h7M7 16h5" /></svg></div>
@@ -617,7 +617,7 @@ export default function LandingPage({ data }) {
             <svg className="funnel-arrow" data-arrow="2" width="28" height="20" viewBox="0 0 28 20" fill="none"><path d="M2 10h22M18 4l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
             <div className="funnel-step" data-step="2">
               <span className="funnel-step-num">03</span>
-              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[2]?.image) || '/assets/the-offer.jpg'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
+              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[2]?.image) || '/assets/the-offer.webp'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
               <div className="funnel-step-overlay" style={{ display: 'none' }}></div>
               <div className="funnel-step-content">
                 <div className="funnel-step-icon"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M9 3v2h6V3" /><path d="M9 10h6M9 14h6M9 18h3" /></svg></div>
@@ -628,7 +628,7 @@ export default function LandingPage({ data }) {
             <svg className="funnel-arrow" data-arrow="3" width="28" height="20" viewBox="0 0 28 20" fill="none"><path d="M2 10h22M18 4l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
             <div className="funnel-step" data-step="3">
               <span className="funnel-step-num">04</span>
-              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[3]?.image) || '/assets/quooker-installer.jpg'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
+              <img loading="lazy" src={urlFor(data?.funnelExplainer?.steps?.[3]?.image) || '/assets/quooker-installer.webp'} alt="" className="funnel-step-bg" style={{ display: 'none' }} />
               <div className="funnel-step-overlay" style={{ display: 'none' }}></div>
               <div className="funnel-step-content">
                 <div className="funnel-step-icon"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.5 19.5 0 0 1 5 12.7 19.8 19.8 0 0 1 1.9 4 2 2 0 0 1 3.9 2H6.9a2 2 0 0 1 2 1.7 13 13 0 0 0 .7 2.8 2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4 13 13 0 0 0 2.8.7 2 2 0 0 1 1.9 2z" /></svg></div>
@@ -768,7 +768,7 @@ export default function LandingPage({ data }) {
         <div className="auto-bento">
           {/* Reviews video tile */}
           <button type="button" className="reviews-tile" id="reviewsPlayBtn" aria-label="Play reviews video">
-            <img loading="lazy" src={urlFor(data?.automation?.reviewsImage) || '/assets/Jamie.jpg'} alt="" />
+            <img loading="lazy" src={urlFor(data?.automation?.reviewsImage) || '/assets/Jamie.webp'} alt="" />
             <div className="reviews-overlay"></div>
             <div className="reviews-play-wrap">
               <div className="reviews-play-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ marginLeft: '3px' }}><polygon points="6 4 22 12 6 20 6 4" /></svg></div>
