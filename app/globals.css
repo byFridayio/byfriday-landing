@@ -487,7 +487,7 @@ ul { list-style: none; padding: 0; }
   .sp-testimonial, .sp-joes-col { padding: 32px !important; }
   .choice-grid { grid-template-columns: 1fr !important; gap: 8px !important; }
   .choice-card { min-height: auto; flex-direction: row; border-radius: 14px; }
-  .choice-body { flex-direction: row; padding: 16px; gap: 12px; }
+  .choice-body { flex-direction: row; padding: 16px; gap: 12px; justify-content: flex-start; }
   .choice-icon { width: 32px; height: 32px; }
   .choice-icon svg { width: 24px; height: 24px; }
   .choice-label { font-size: 15px; }
