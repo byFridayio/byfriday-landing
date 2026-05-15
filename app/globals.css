@@ -29,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
@@ -493,8 +494,9 @@ ul { list-style: none; padding: 0; }
   .inbox-name { font-size: 12px; }
   .inbox-line1 { flex-wrap: wrap; }
   .sp-video-cover iframe { width: 300%; height: 300%; }
-  .inbox-frame { margin-left: -16px; margin-right: -16px; border-radius: 20px; }
   .step-pill { display: none; }
+  .platform-inner { display: flex; flex-direction: column; gap: 32px; }
+  .inbox-frame { width: calc(100vw - 40px); max-width: calc(100vw - 40px); box-sizing: border-box; border-radius: 20px; }
 }
 @media (max-width: 640px) {
   .step-word { display: none; }
