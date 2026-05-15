@@ -493,6 +493,8 @@ ul { list-style: none; padding: 0; }
   .inbox-name { font-size: 12px; }
   .inbox-line1 { flex-wrap: wrap; }
   .sp-video-cover iframe { width: 300%; height: 300%; }
+  .inbox-frame { margin-left: -16px; margin-right: -16px; border-radius: 20px; }
+  .step-pill { display: none; }
 }
 @media (max-width: 640px) {
   .step-word { display: none; }
