@@ -388,7 +388,7 @@ export default function LandingPage({ data }) {
     /* Social proof popup */
     function initPopup() {
       var el = document.getElementById('spPopup');
-      if (!el) return;
+      if (!el || window.innerWidth < 768) return;
 
       var cities = ['London', 'Manchester', 'Birmingham', 'Leeds', 'Bristol', 'Liverpool', 'Edinburgh', 'Glasgow', 'Cardiff', 'Newcastle', 'Sheffield', 'Brighton', 'Oxford', 'Cambridge', 'Belfast', 'Nottingham', 'Southampton', 'Reading', 'Aberdeen', 'York'];
       var initials = ['AR', 'TS', 'MK', 'JD', 'EL', 'BP', 'NH', 'OW', 'CS', 'RM', 'FH', 'DG', 'KW', 'PL', 'GS', 'VA', 'HC', 'IW', 'ZM', 'QB'];
