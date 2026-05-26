@@ -294,8 +294,8 @@ export default function LandingPage({ data }) {
           h += '<h3 class="pf-step-q">Tell us who you are.</h3>';
           h += '<p class="pf-step-hint">So we know what to say when we email you back.</p>';
           h += '<div class="pf-field-grid">';
-          h += '<label class="pf-field"><span class="pf-field-label">Company name</span><input type="text" placeholder="Quooker UK" value="' + esc(formData.company) + '" data-key="company" class="pf-input"></label>';
-          h += '<label class="pf-field"><span class="pf-field-label">What should we call you?</span><input type="text" placeholder="Stephen" value="' + esc(formData.name) + '" data-key="name" class="pf-input"></label>';
+          h += '<label class="pf-field"><span class="pf-field-label">Company name</span><input type="text" placeholder="Bloggs & Co" value="' + esc(formData.company) + '" data-key="company" class="pf-input"></label>';
+          h += '<label class="pf-field"><span class="pf-field-label">What should we call you?</span><input type="text" placeholder="Joe" value="' + esc(formData.name) + '" data-key="name" class="pf-input"></label>';
           h += '</div>';
           var ok3 = formData.company && formData.name;
           h += '<div class="pf-next-row"><button class="pf-next" ' + (ok3 ? '' : 'disabled') + '>Continue \u2192</button></div>';
@@ -303,7 +303,7 @@ export default function LandingPage({ data }) {
           h += '<h3 class="pf-step-q">Where shall we send byFriday\u2019s pricing?</h3>';
           h += '<p class="pf-step-hint">We will send you our pricing to your email and Whatsapp. <b>We will not call you!</b></p>';
           h += '<div class="pf-field-grid">';
-          h += '<label class="pf-field"><span class="pf-field-label">Work email</span><input type="email" placeholder="stephen@quooker.co.uk" value="' + esc(formData.email) + '" data-key="email" class="pf-input"></label>';
+          h += '<label class="pf-field"><span class="pf-field-label">Work email</span><input type="email" placeholder="joe@company.com" value="' + esc(formData.email) + '" data-key="email" class="pf-input"></label>';
           h += '<label class="pf-field"><span class="pf-field-label">Phone number</span><input type="tel" placeholder="+44 7700 900123" value="' + esc(formData.phone) + '" data-key="phone" class="pf-input"></label>';
           h += '</div>';
           var ok4 = formData.email.indexOf('@') > -1 && formData.phone.length >= 7;
@@ -545,36 +545,41 @@ export default function LandingPage({ data }) {
             <img loading="lazy" src={urlFor(data?.socialProof?.caseStudyImage) || '/assets/quooker-byfriday.webp'} alt="" />
             <div className="sp-video-overlay"></div>
           </div>
-          <div className="sp-cred-card">
-            <div className="sp-joes-col">
-              <div className="sp-joes-label">{data?.socialProof?.credClientName || "Joe's Doors"}</div>
-              <div className="sp-joes-big" data-count={data?.socialProof?.credLeadCount || '1600'}>0</div>
-              <div className="sp-joes-suffix">{data?.socialProof?.credLeadSuffix || 'qualified leads / month'}</div>
-              <div className="sp-joes-divider"></div>
-              <div className="sp-joes-row"><span className="sp-joes-row-label">Avg ticket</span><span className="sp-joes-row-value">{data?.socialProof?.credAvgTicket || '\u00a310,000+'}</span></div>
-              <div className="sp-joes-row"><span className="sp-joes-row-label">Channel</span><span className="sp-joes-row-value">{data?.socialProof?.credChannel || 'Paid + form qualified'}</span></div>
-            </div>
-            <div className="sp-joes-img-wrap">
-              <img loading="lazy" src={urlFor(data?.socialProof?.credImage) || '/assets/joes-door-brochure.webp'} alt={data?.socialProof?.credClientName || "Joe's Doors"} />
-            </div>
-          </div>
-          <div className="sp-testimonial">
-            <div className="sp-testimonial-stars">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
-            </div>
-            <p className="sp-testimonial-quote">{data?.socialProof?.testimonialQuote || '\u201CThe team at byFriday rebuilt our entire lead funnel and it\u2019s already paying for itself in the first month. We doubled the calls into our sales line without spending a penny more on ads.\u201D'}</p>
-            <div className="sp-testimonial-author">
-              <div className="sp-testimonial-avatar">{data?.socialProof?.testimonialInitials || 'LM'}</div>
-              <div>
-                <div className="sp-testimonial-name">{data?.socialProof?.testimonialName || 'Andrew Name'}</div>
-                <div className="sp-testimonial-role">{data?.socialProof?.testimonialRole || "Managing Director \u00b7 Joe's Doors"}</div>
+          {/* Joe's Doors case study \u2014 hidden temporarily, do not delete */}
+          {false && (
+            <div className="sp-cred-card">
+              <div className="sp-joes-col">
+                <div className="sp-joes-label">{data?.socialProof?.credClientName || "Joe's Doors"}</div>
+                <div className="sp-joes-big" data-count={data?.socialProof?.credLeadCount || '1600'}>0</div>
+                <div className="sp-joes-suffix">{data?.socialProof?.credLeadSuffix || 'qualified leads / month'}</div>
+                <div className="sp-joes-divider"></div>
+                <div className="sp-joes-row"><span className="sp-joes-row-label">Avg ticket</span><span className="sp-joes-row-value">{data?.socialProof?.credAvgTicket || '\u00a310,000+'}</span></div>
+                <div className="sp-joes-row"><span className="sp-joes-row-label">Channel</span><span className="sp-joes-row-value">{data?.socialProof?.credChannel || 'Paid + form qualified'}</span></div>
+              </div>
+              <div className="sp-joes-img-wrap">
+                <img loading="lazy" src={urlFor(data?.socialProof?.credImage) || '/assets/joes-door-brochure.webp'} alt={data?.socialProof?.credClientName || "Joe's Doors"} />
               </div>
             </div>
-          </div>
+          )}
+          {false && (
+            <div className="sp-testimonial">
+              <div className="sp-testimonial-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-ember-glow)"><polygon points="12 2 15.1 8.6 22 9.6 17 14.5 18.2 21.5 12 18.2 5.8 21.5 7 14.5 2 9.6 8.9 8.6" /></svg>
+              </div>
+              <p className="sp-testimonial-quote">{data?.socialProof?.testimonialQuote || '\u201CThe team at byFriday rebuilt our entire lead funnel and it\u2019s already paying for itself in the first month. We doubled the calls into our sales line without spending a penny more on ads.\u201D'}</p>
+              <div className="sp-testimonial-author">
+                <div className="sp-testimonial-avatar">{data?.socialProof?.testimonialInitials || 'LM'}</div>
+                <div>
+                  <div className="sp-testimonial-name">{data?.socialProof?.testimonialName || 'Andrew Name'}</div>
+                  <div className="sp-testimonial-role">{data?.socialProof?.testimonialRole || "Managing Director \u00b7 Joe's Doors"}</div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -740,7 +745,6 @@ export default function LandingPage({ data }) {
             <span className="section-eyebrow" style={{ background: '#fff' }}>{data?.landingPages?.eyebrow || 'Smart landing pages'}</span>
             <h2 className="section-h2">{data?.landingPages?.headline || <>Double your conversion rate.<br />Double your year.</>}</h2>
             <p>{data?.landingPages?.body1 || <>If you increase your conversion rate from <strong>1%</strong> to <strong>2%</strong>, you just doubled your revenue for the year. Tailor a page to each specific ad and you see that double again. Add a fast load and a multi-step qualifying form &mdash; another jump.</>}</p>
-            <p className="pem">{data?.landingPages?.italicLine || "It's that simple."}</p>
             <p>{data?.landingPages?.body2 || 'Beautifully designed. Built around conversion. Page-speed scored. Mobile-first. Connected to the rest of the system from day one.'}</p>
           </div>
           <div>
